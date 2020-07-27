@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #242526;
 }
 
 code {
@@ -41,6 +42,7 @@ a {
   background-color: var(--bg);
   padding: 0 1rem;
   border-bottom: var(--border);
+  z-index: 2;
 }
 
 /* <ul> */
@@ -98,6 +100,7 @@ a {
   padding: 1rem;
   overflow: hidden;
   transition: height var(--speed) ease;
+  z-index: 3;
 }
 
 .menu {
@@ -162,3 +165,116 @@ a {
   transform: translateX(110%);
   transition: all var(--speed) ease;
 }
+
+.sidebar {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 280px;
+  background: white;
+  padding: 20px;
+  font-size: 15px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  margin: 20px;
+  color: #a0a0a0;
+  z-index: 100;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+/* landing page */
+.landing-page{
+  height: 60vh;
+  padding: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: dodgerblue;
+  margin-bottom: 1em;
+  padding-bottom: 3.5em;
+  text-align: center;
+  clip-path: polygon(50% 0%, 100% 0, 100% 65%, 50% 100%, 0 65%, 0 0);
+  z-index: -100;
+}
+
+.welcome-text {
+  font-size: 3rem;
+  color: #242526;
+}
+
+/* home.js */
+
+.first-project, .second-project, .third-project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.computer-img {
+  height: 40vh;
+  margin: 5%;
+  border-radius: 10px;
+}
+
+.project-text {
+  height: 20vh;
+  width: 25vw;
+  padding: 10px;
+  margin: 5%;
+  background: #525357;
+  font-weight: 450;
+  font-size: 1rem;
+  border: 1px solid #a0a0a0 ;
+  border-radius: 5px;
+}
+
+/* PHONE */
+
+.phone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 65vw; */
+  z-index: 5;
+  /* position: absolute; */
+}
+
+.phone-buttons {
+  width: 205px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: auto;
+  position: absolute;
+  z-index: 0;
+}
+
+.phone-btn {
+  height: 35px;
+  width: 65px;
+  border: 1px solid #525357;
+  border-radius: 50%;
+  text-align: center;
+  /* padding: 10px 10px; */
+  margin: 5px;
+}
+
+
+
+
+
+
