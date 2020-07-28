@@ -1,23 +1,29 @@
 import React, { useState, useEffect } from 'react'
+import myResume from '../img/myResume.PNG'
  const Welcome = () => {
 
   const [knowledge, setKnowledge] = useState(true)
   const [resume, setResume] = useState(false)
   const [portfolio, setPortfolio] = useState(false)
-  const [spanInput, setSpan] = useState('')
+  const [spanInput, setSpan] = useState('Knowledge')
 
   function toggleKnowledge(){
-    setKnowledge(!knowledge)
+    setKnowledge(true)
     setSpan('Knowledge')
   }
 
   function toggleResume(){
-    setResume(!resume)
+    setResume(true)
+    setKnowledge(false)
+    setPortfolio(false)
+
     setSpan('Resume')
   }
 
   function togglePortfolio(){
-    setPortfolio(!portfolio)
+    setPortfolio(true)
+    setResume(false)
+    setKnowledge(false)
     setSpan('Portfolio')
   }
 
@@ -29,24 +35,33 @@ import React, { useState, useEffect } from 'react'
         <div className="tech-text">
           <p className="tech-title">Current <span className="span-info">{spanInput}</span></p>
           <div className="tech-info">
+              { knowledge === true ? (
             <ul className="tech-info-display">
-              <li className="languages-list">| Postgres |</li>
-              <li className="languages-list">| React |</li>
-              <li className="languages-list">| Express |</li>
-              <li className="languages-list">| JavaScript |</li>
-              <li className="languages-list">| Massive |</li>
-              <li className="languages-list">| Redux |</li>
-              <li className="languages-list">| Hooks |</li>
-              <li className="languages-list">| Bcrypt |</li>
-              <li className="languages-list">| Sass |</li>
-              <li className="languages-list">| Less |</li>
+                  <li className="languages-list">| Postgres |</li>
+                  <li className="languages-list">| React |</li>
+                  <li className="languages-list">| Express |</li>
+                  <li className="languages-list">| JavaScript |</li>
+                  <li className="languages-list">| Massive |</li>
+                  <li className="languages-list">| Redux |</li>
+                  <li className="languages-list">| Hooks |</li>
+                  <li className="languages-list">| Bcrypt |</li>
+                  <li className="languages-list">| Sass |</li>
+                  <li className="languages-list">| Less |</li>
             </ul>
+              ) : ( resume === true ?(
+
+                <div>
+                  <img className="my-resume" src={myResume} alt="resume"/>
+                </div>
+              ) : ( portfolio === true ? (
+                <div>portfolio</div> 
+               ) : null ) )}
           </div>
           <div className="tech-sections">
             <ul className="tech-list">
-              <li className="tech-list-item">Knowledge</li>
-              <li className="tech-list-item">Resume</li>
-              <li className="tech-list-item">Portfolio</li>
+              <li onClick={() => toggleKnowledge()} className="tech-list-item">Knowledge</li>
+              <li onClick={() => toggleResume()} className="tech-list-item">Resume</li>
+              <li onClick={() => togglePortfolio()} className="tech-list-item">Portfolio</li>
             </ul>
           </div>
         </div> 
