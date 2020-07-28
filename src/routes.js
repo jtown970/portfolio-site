@@ -1,18 +1,18 @@
 import React from "react"
 import { Switch, Route, Redirect } from "react-router-dom"
-import Landing from "./components/Landing"
-import Home from "./components/Home"
-import Header from "./components/Header"
-import Footer from "./components/Footer"
+import Login from "./components/Login"
+import Welcome from "./components/Welcome"
+import project1 from "./components/ProjectOne"
+import project2 from "./components/ProjectTwo"
 import { useStore } from "react-redux"
 
 const Routes = () => {
-  return (
+  return ( 
     <Switch>
-      <Route exact path='/' component={Landing} />
-      <ProtectedRoute path='/Home' component={Home} />
-      {/* <ProtectedRoute path='/Popup/:post_id' component={Header} />
-      <ProtectedRoute path='/Profile' component={Profile} /> */}
+      <Route exact path='/' component={Login} />
+      <ProtectedRoute path='/welcome' component={Welcome} />
+      <ProtectedRoute path='/project/1' component={project1} />
+      <ProtectedRoute path='/project/2' component={project2} />
     </Switch>
   )
 }

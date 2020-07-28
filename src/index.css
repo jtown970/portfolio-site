@@ -467,6 +467,7 @@ a {
   /* border: 1px solid black; */
 }
 
+
 .tech-info-display {
   width: 80%;
   height: 80%;
@@ -513,6 +514,13 @@ a {
 .my-resume {
   height: 20vh;
   z-index: 5;
+}
+
+.about-img {
+  height: 12vh;
+  width: 10vw;
+  margin: 0 10px;
+  border-radius: 5px;
 }
 
 

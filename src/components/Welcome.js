@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import myResume from '../img/myResume.PNG'
+import codePound from '../img/code-pound-home.PNG'
+import iVote from '../img/I-vote.PNG'
  const Welcome = () => {
 
   const [knowledge, setKnowledge] = useState(true)
@@ -50,7 +52,6 @@ import myResume from '../img/myResume.PNG'
   }
 
 
-
   return (
     <div className="about-container">
       <div className="left">
@@ -62,6 +63,7 @@ import myResume from '../img/myResume.PNG'
                   <li className="languages-list">| Postgres |</li>
                   <li className="languages-list">| React |</li>
                   <li className="languages-list">| Express |</li>
+                  <li className="languages-list">| Node |</li>
                   <li className="languages-list">| JavaScript |</li>
                   <li className="languages-list">| Massive |</li>
                   <li className="languages-list">| Redux |</li>
@@ -71,13 +73,15 @@ import myResume from '../img/myResume.PNG'
                   <li className="languages-list">| Less |</li>
             </ul>
               ) : ( resume === true ?(
-
                 <div>
                   <img className="my-resume" src={myResume} alt="resume"/>
                 </div>
               ) : ( portfolio === true ? (
-                <div>portfolio</div> 
-               ) : null ) )}
+                <div className="about-portfolio">
+                  <img className="about-img about-project1" src={iVote} alt="I vote full-stack project"/>
+                  <img className="about-img about-project2" src={codePound} alt=" the code pound full-stack project"/>
+                </div> 
+               ) : null ))}
           </div>
           <div className="tech-sections">
             <ul className="tech-list">
