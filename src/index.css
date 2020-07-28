@@ -386,6 +386,27 @@ a {
 }
 
 
+/* project1 */
+.project-description {
+  padding: 10px;
+  border: 1px solid #525357;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #242526;
+  color: var(--text-color);
+  margin-top: 5%;
+}
+
+.forward-arrow {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+}
+.back-arrow {
+  position: absolute;
+  left: 0;
+  margin-left: 30px;
+}
+
 
 
 
