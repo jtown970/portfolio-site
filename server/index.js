@@ -2,7 +2,7 @@ require('dotenv').config()
 const express = require('express'),
       session = require('express-session'),
       massive = require('massive'),
-      // authCtrl = require('./controllers/authController'),
+      authCtrl = require('./controllers/authCtrl'),
       // path = require('path'),
       // setup = require('./controllers/setup'),
       {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env,
@@ -20,6 +20,14 @@ app.use(
     cookie: {maxAge: 1000 * 60 * 60 * 24 * 31}, // good for one month
   })
 )
+
+// authentication endpoints 
+app.post('/auth/register', authCtrl.register)
+app.post(`/auth/login`, authCtrl.login)
+app.put(`/auth/update`, authCtrl.updateInfo)
+app.delete(`/auth/logout`, authCtrl.logout)
+app.get(`/auth/user`, authCtrl.getUser)
+
 
 massive({
   connectionString: CONNECTION_STRING,
