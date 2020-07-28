@@ -6,6 +6,10 @@ import myResume from '../img/myResume.PNG'
   const [resume, setResume] = useState(false)
   const [portfolio, setPortfolio] = useState(false)
   const [spanInput, setSpan] = useState('Knowledge')
+  const [story, setStory] = useState(true)
+  const [passion, setPassion] = useState(false)
+  const [goals, setGoals] = useState(false)
+  const [aboutSpanInput, setAboutSpan] = useState('Story')
 
   function toggleKnowledge(){
     setKnowledge(true)
@@ -16,7 +20,6 @@ import myResume from '../img/myResume.PNG'
     setResume(true)
     setKnowledge(false)
     setPortfolio(false)
-
     setSpan('Resume')
   }
 
@@ -25,6 +28,25 @@ import myResume from '../img/myResume.PNG'
     setResume(false)
     setKnowledge(false)
     setSpan('Portfolio')
+  }
+
+  function toggleStory(){
+    setStory(true)
+    setAboutSpan('Story')
+  }
+
+  function togglePassion(){
+    setPassion(true)
+    setGoals(false)
+    setStory(false)
+    setAboutSpan('Passion')
+  }
+
+  function toggleGoals(){
+    setGoals(true)
+    setPassion(false)
+    setStory(false)
+    setAboutSpan('Goals')
   }
 
 
@@ -85,14 +107,20 @@ import myResume from '../img/myResume.PNG'
           </svg>
         </div>
         <div className="about-info">
-          <p className="about-text">My <span className="span-login">Story</span></p>
+          <p className="about-text">My <span className="span-login">{aboutSpanInput}</span></p>
+          { story === true ? (
           <p className="about-bio">Hey my name is Jason Towner I'm a 26 year old Full Stack web developer. <br/>I made the switch to programing when I was 24 after working in restaurants for 13 yep started bussing table at 11.  I feel in love with coding when I first saw that I could build something that would alow people from all over the world to use something I was able to build.</p>
+          ) : ( passion === true ? (
+            <p className="about-bio">this is my passion</p>
+          ) : ( goals === true ? (
+            <p className="about-bio"> my goals here</p>
+          ): null ))}
         </div>
         <div className="about-sections">
           <ul className="about-list">
-            <li className="list-item">Story</li>
-            <li className="list-item">Passion</li>
-            <li className="list-item">Goals</li>
+            <li onClick={() => toggleStory()} className="list-item">Story</li>
+            <li onClick={() => togglePassion()} className="list-item">Passion</li>
+            <li onClick={() => toggleGoals()} className="list-item">Goals</li>
           </ul>
         </div>
       </div>
