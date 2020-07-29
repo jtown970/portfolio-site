@@ -92,23 +92,23 @@ import iVote from '../img/I-vote.PNG'
           </div>
         </div> 
         <div className="welcome-letter-j">
-          <svg width="49" height="84" viewBox="0 0 49 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg width="49" height="84" viewBox="0 0 49 84" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.0219864 41.8415L48.8902 0.465434L48.9275 83.1723L0.0219864 41.8415Z" fill="#484A4D"/>
             <rect x="28" y="27" width="20" height="5" fill="#1E90FF"/>
             <rect x="29" y="51" width="14" height="4" fill="#1E90FF"/>
             <path d="M38.0441 51.1548L38.0846 31.9389L43.0613 31.9433L43.0208 51.1592L38.0441 51.1548Z" fill="#1E90FF"/>
             <path d="M29.0098 54.6768L28.9344 44.0008L33.8187 43.9603L33.8941 54.6363L29.0098 54.6768Z" fill="#1E90FF"/>
-          </svg>
+          </svg> */}
         </div>
       </div>
       
       <div className="right-about">
         <div className="welcome-letter-t">
-          <svg width="50" height="84" viewBox="0 0 50 84" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {/* <svg width="50" height="84" viewBox="0 0 50 84" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M49.6066 41.8582L0.652054 83.1309L0.787697 0.424202L49.6066 41.8582Z" fill="#1E90FF"/>
             <path d="M10.2509 56.5288L10.0744 31.5332L14.7373 31.4946L14.9138 56.4902L10.2509 56.5288Z" fill="#484A4D"/>
             <path d="M0 27H25V32H0V27Z" fill="#484A4D"/>
-          </svg>
+          </svg> */}
         </div>
         <div className="about-info">
           <p className="about-text">My <span className="span-login">{aboutSpanInput}</span></p>

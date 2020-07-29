@@ -289,13 +289,6 @@ a {
 }
 
 
-
-
-/* .line-break {
-  width: 100%;
-  background: #484a4d;
-} */
-
 .right {
   width: 50%;
   background: #484a4d;
@@ -338,12 +331,33 @@ a {
 }
 
 .login-btn {
-  margin: 10px;
+  width: 100%;
+  /* margin: 10px; */
   padding: 8px;
   border: none;
   border-radius: 10px;
   background-color: dodgerblue;
   color: var(--text-color);  
+}
+.register-btn {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-btn {
+  text-align: center;
+  color: #dadce1;
+  font-size: 1rem;
+  font-weight: 400;
+  border-bottom: 1px solid dodgerblue;
+  padding: 5px;
+  margin-left: 80px;
+}
+.register-btn:hover {
+  color: dodgerblue;
+  border-bottom: 1px solid #a0a0a0;
 }
 
 .letter-j {
@@ -359,7 +373,40 @@ a {
   margin-top: 4px;
 }
 
+.nav {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logout-btn {
+  margin-right: 50px;
+  padding: 5px;
+  background: #484a4d;
+  color: dodgerblue;
+  font-weight: 500;
+  font-size: .9rem;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  margin-right: 50px;
+  padding: 5px;
+  background: dodgerblue;
+  color: #484a4d;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
 /* about */
+
+
 .welcome-letter-j {
   position: absolute;
   top: 0;

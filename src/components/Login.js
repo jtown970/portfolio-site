@@ -1,11 +1,19 @@
 import React, { useState } from "react"
 import axios from "axios"
-import { registerUser } from "../ducks/userReducer"
+import { registerUser, loginUser } from "../ducks/userReducer"
 import { connect } from "react-redux"
 
 function Login(props) {
   const [email, setEmail] = useState("")
   const [full_name, setFullname] = useState("")
+  const [reg, setReg] = useState(false)
+  // const [btnText, setBtnText] = useState('Login')
+
+  function toggleReg(){
+    setReg(!reg)
+    // setBtnText('Register')
+  }
+
 
   function register() {
     axios
@@ -18,6 +26,18 @@ function Login(props) {
       .catch((err) => {
         alert("Could not register.")
       })
+  }
+
+  function login() {
+    axios
+      .post("/auth/login", { email })
+      .then((res) => {
+        props.loginUser(res.data);
+        props.history.push("/welcome");
+      })
+      .catch((err) => {
+        alert("Username or password incorrect");
+      });
   }
 
   return (
@@ -46,14 +66,19 @@ function Login(props) {
           </svg>
         </div>
         <div className="login-info">
-          <p className="login-text">Enter email to <span className="span-login">Login</span></p>
+          {reg === false ? (
+            <p className="login-text">Enter email to <span className="span-login">Login</span></p>
+
+          ) : <p className="login-text">Enter email to <span className="span-login">Register</span></p> }
+          {reg === true ? (
           <input 
             className="login-email" 
             placeholder="Name" 
             type='text'
             value={full_name}
             onChange={(e) => setFullname(e.target.value)}
-          />
+          /> 
+          ) : null}
           <input 
             className="login-email" 
             placeholder="email"
@@ -61,7 +86,21 @@ function Login(props) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <button className="login-btn" onClick={() => register()}>Login</button>
+          {reg === false ? (
+            <div>
+              <button className="login-btn" onClick={() => login()}>Login</button>
+              <span className="register-btn-span">
+                <p onClick={() => toggleReg()} className="register-btn">Register</p>
+              </span> 
+            </div>
+          ) : 
+          <div>
+          <button className="login-btn" onClick={() => register()}>Register</button>
+            <span className="register-btn-span">
+              <p onClick={() => toggleReg()} className="register-btn">Login</p>
+            </span> 
+          </div>
+          }
         </div>
       </div>
     </div>
@@ -70,6 +109,6 @@ function Login(props) {
 
 const mapStateToProps = (reduxState) => reduxState
 
-const mapDispatchToProps = { registerUser }
+const mapDispatchToProps = { registerUser, loginUser }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Login)
