@@ -69,7 +69,7 @@ function Login(props) {
           {reg === false ? (
             <p className="login-text">Enter email to <span className="span-login">Login</span></p>
 
-          ) : <p className="login-text">Enter email to <span className="span-login">Register</span></p> }
+          ) : <p className="login-text">Enter below to <span className="span-login">Register</span></p> }
           {reg === true ? (
           <input 
             className="login-email" 

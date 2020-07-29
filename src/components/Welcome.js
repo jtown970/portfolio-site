@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react'
+import {Link, withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
 import myResume from '../img/myResume.PNG'
 import codePound from '../img/code-pound-home.PNG'
 import iVote from '../img/I-vote.PNG'
@@ -12,6 +14,40 @@ import iVote from '../img/I-vote.PNG'
   const [passion, setPassion] = useState(false)
   const [goals, setGoals] = useState(false)
   const [aboutSpanInput, setAboutSpan] = useState('Story')
+  const [seeResume, setSeeResume] = useState(false)
+
+
+    // pop up
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-button]')
+const overlay = document.getElementById('overlay')
+
+openModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal2 = document.querySelector(button.dataset.modalTarget)
+    openModal(modal2)
+  })
+})
+
+closeModalButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const modal = button.closest('.modal')
+    closeModal(modal)
+  })
+})
+
+function openModal(modal) {
+  if (modal == null) return
+  modal.classList.add('active')
+  overlay.classList.add('active')
+}
+
+function closeModal(modal) {
+  if (modal == null) return
+  modal.classList.remove('active')
+  overlay.classList.remove('active')
+}
+// end of pop up
 
   function toggleKnowledge(){
     setKnowledge(true)
@@ -51,6 +87,12 @@ import iVote from '../img/I-vote.PNG'
     setAboutSpan('Goals')
   }
 
+  function toggleSeeResume() {
+    setSeeResume(!seeResume)
+  }
+
+
+
 
   return (
     <div className="about-container">
@@ -60,7 +102,7 @@ import iVote from '../img/I-vote.PNG'
           <div className="tech-info">
               { knowledge === true ? (
             <ul className="tech-info-display">
-                  <li className="languages-list">| Postgres |</li>
+                  <li className="languages-list">| PostgreSQL |</li>
                   <li className="languages-list">| React |</li>
                   <li className="languages-list">| Express |</li>
                   <li className="languages-list">| Node |</li>
@@ -74,12 +116,39 @@ import iVote from '../img/I-vote.PNG'
             </ul>
               ) : ( resume === true ?(
                 <div>
-                  <img className="my-resume" src={myResume} alt="resume"/>
+                  <img data-modal-target="#modal2" className="my-resume" src={myResume} alt="resume"/>
+                  {/* popup start */}
+                  <div className="third">
+                    {/* <h2 className="right">AZ house Reps</h2> */}
+                    {/* <button className="btn btn-background-circle see-votes" data-modal-target="#modal2">View</button> */}
+                    <div className="modal" id="modal2">
+                      <div className="modal-header">
+                        <div className="title">My resume</div>
+                        <button data-close-button className="close-button">&times;</button>
+                      </div>
+                      <div className="newbody">
+                        <div className="hours">
+                        <div className="left-nav">
+                      {/* <p>Jason Towner</p>
+                      <p>Full Stack developer</p> */}
+                      <img className="my-resume-popup" src={myResume} alt="resume"/>
+                    </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="overlay"></div>
+
+                  </div>
+                  {/* popup end */}
                 </div>
               ) : ( portfolio === true ? (
                 <div className="about-portfolio">
-                  <img className="about-img about-project1" src={iVote} alt="I vote full-stack project"/>
-                  <img className="about-img about-project2" src={codePound} alt=" the code pound full-stack project"/>
+                  <Link style={{ textDecoration: "none" }} to="/project/1">
+                    <img className="about-img about-project2" src={codePound} alt=" the code pound full-stack project"/>
+                  </Link>
+                  <Link style={{ textDecoration: "none" }} to="/project/2">
+                    <img className="about-img about-project1" src={iVote} alt="I vote full-stack project"/>
+                  </Link>
                 </div> 
                ) : null ))}
           </div>
@@ -131,4 +200,8 @@ import iVote from '../img/I-vote.PNG'
     </div>
   )
 }
-export default Welcome
+
+const mapStateToProps = reduxState => reduxState
+
+export default withRouter(connect(mapStateToProps)(Welcome))
+// export default Welcome

@@ -34,13 +34,13 @@ function Header(props) {
     )
     }
 
-    if (pathname === '/welcome') {
+    if (pathname === '/welcome' || pathname === '/project/1' || pathname === '/project/2') {
 
     return (
       <div>
         <div className="nav-container">
           <div className="nav">
-            <div>
+            <div className="logo">
               <svg width="43" height="37" viewBox="0 0 43 37" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.0092552 18.8209L21.5205 0.814322L21.5373 36.8083L0.0092552 18.8209Z" fill="#484A4D"/>
                 <path d="M42.9655 18.828L21.4161 36.7899L21.4758 0.795934L42.9655 18.828Z" fill="#1E90FF"/>

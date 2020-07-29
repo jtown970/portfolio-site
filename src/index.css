@@ -37,6 +37,10 @@ a {
 /* Top Navigation Bar */
 
 /* <nav> */
+.logo {
+  margin-left: 2%;
+}
+
 .navbar {
   height: var(--nav-size);
   background-color: var(--bg);
@@ -353,8 +357,10 @@ a {
   font-weight: 400;
   border-bottom: 1px solid dodgerblue;
   padding: 5px;
-  margin-left: 80px;
+  margin-left: 73px;
 }
+
+
 .register-btn:hover {
   color: dodgerblue;
   border-bottom: 1px solid #a0a0a0;
@@ -523,6 +529,16 @@ a {
   /* border: 1px solid black; */
 }
 
+.skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column;
+  /* border: 1px solid black; */
+}
+
 .tech-title {
   color: #dadce1;
   font-size: 1.2rem;
@@ -531,6 +547,11 @@ a {
 
 .languages-list {
   margin: 10px;
+  color: #dadce1;
+}
+
+.skills-list {
+  margin: 5px;
   color: #dadce1;
 }
 
@@ -558,7 +579,12 @@ a {
 
 .my-resume {
   height: 20vh;
-  z-index: 5;
+  z-index: 50;
+}
+
+.my-resume-popup {
+  height: 60vh;
+  /* z-index: 50; */
 }
 
 .about-img {
@@ -569,14 +595,91 @@ a {
 }
 
 
-/* project1 */
+/* popup start */
+/* // testing popup */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 400ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #888e92 100%);    width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/* popup end */
+
+
+/* project 1 */
+
 .project-description {
+  width: 24vw;
   padding: 10px;
   border: 1px solid #525357;
   border-radius: 10px;
   box-shadow: 5px 5px 15px #242526;
   color: var(--text-color);
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.project-h2 {
+  margin-left: 25px;
+  border-bottom: 1px solid #888e92;
+  width: 38%;
 }
 
 .forward-arrow {
@@ -587,7 +690,20 @@ a {
 .back-arrow {
   position: absolute;
   left: 0;
-  margin-left: 30px;
+  margin-left: 20px;
+}
+
+.codePound-duties {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+}
+.duties-list {
+  list-style: square;
+  padding: 5px;
+  margin: 10px;
 }
 
 
