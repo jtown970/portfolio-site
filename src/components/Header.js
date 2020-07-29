@@ -8,21 +8,35 @@ import { ReactComponent as CogIcon } from '../icons/cog.svg';
 import { ReactComponent as ChevronIcon } from '../icons/chevron.svg';
 import { ReactComponent as ArrowIcon } from '../icons/arrow.svg';
 import { ReactComponent as BoltIcon } from '../icons/bolt.svg';
+import {getUser} from '../ducks/userReducer'
+import {withRouter} from 'react-router-dom'
+import {connect} from 'react-redux'
 
 import { CSSTransition } from 'react-transition-group';
 
-export default function Header() {
-  return (
-    <Navbar>
-      {/* <NavItem icon={<PlusIcon />} /> */}
-      <NavItem icon={<BellIcon />} />
-      <NavItem icon={<MessengerIcon />} />
+function Header(props) {
+  const pathname = props.location.pathname
+  if (pathname === '/' || pathname === '/Register') {
 
-      <NavItem icon={<CaretIcon />}>
-        <DropdownMenu></DropdownMenu>
-      </NavItem>
-    </Navbar>
-  )
+    return (
+        <div></div>
+    )
+    }
+
+    if (pathname === '/welcome') {
+
+    return (
+      <Navbar>
+        {/* <NavItem icon={<PlusIcon />} /> */}
+        <NavItem icon={<BellIcon />} />
+        <NavItem icon={<MessengerIcon />} />
+  
+        <NavItem icon={<CaretIcon />}>
+          <DropdownMenu></DropdownMenu>
+        </NavItem>
+      </Navbar>
+    )
+  }
 }
 
 function Navbar(props) {
@@ -134,3 +148,5 @@ function DropdownMenu() {
     </div>
   );
 }
+const mapStateToProps = state => state
+export default withRouter(connect(mapStateToProps, {getUser})(Header))

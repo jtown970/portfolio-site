@@ -21,7 +21,7 @@ module.exports = {
     const db = req.app.get('db')
     const {email} = req.body
 
-    const existingUser = await db.get_user_by_email(email)
+    const existingUser = await db.check_user(email)
 
     if (!existingUser[0]) {
       return res.status(404).send("user does not exist")

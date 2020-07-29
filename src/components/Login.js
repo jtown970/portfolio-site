@@ -1,6 +1,25 @@
-import React from 'react'
+import React, { useState } from "react"
+import axios from "axios"
+import { registerUser } from "../ducks/userReducer"
+import { connect } from "react-redux"
 
-export default function Login() {
+function Login(props) {
+  const [email, setEmail] = useState("")
+  const [full_name, setFullname] = useState("")
+
+  function register() {
+    axios
+      .post("/auth/register", { full_name, email})
+      .then((res) => {
+        props.registerUser(res.data)
+
+        props.history.push("/welcome")
+      })
+      .catch((err) => {
+        alert("Could not register.")
+      })
+  }
+
   return (
     <div className="login-container">
       <div className="left">
@@ -28,10 +47,29 @@ export default function Login() {
         </div>
         <div className="login-info">
           <p className="login-text">Enter email to <span className="span-login">Login</span></p>
-          <input className="login-email" placeholder="email"/>
-          <button className="login-btn">Login</button>
+          <input 
+            className="login-email" 
+            placeholder="Name" 
+            type='text'
+            value={full_name}
+            onChange={(e) => setFullname(e.target.value)}
+          />
+          <input 
+            className="login-email" 
+            placeholder="email"
+            type='email'
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <button className="login-btn" onClick={() => register()}>Login</button>
         </div>
       </div>
     </div>
   )
 }
+
+const mapStateToProps = (reduxState) => reduxState
+
+const mapDispatchToProps = { registerUser }
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
