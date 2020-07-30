@@ -1,0 +1,34 @@
+.nav {
+  height: 7vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  margin-left: 2%;
+}
+
+.logout-btn {
+  margin-right: 50px;
+  padding: 5px;
+  background: #484a4d;
+  color: dodgerblue;
+  font-weight: 500;
+  font-size: .9rem;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}
+
+.logout-btn:hover {
+  margin-right: 50px;
+  padding: 5px;
+  background: dodgerblue;
+  color: #484a4d;
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+}

@@ -5,8 +5,8 @@ import iVote from '../img/I-vote.PNG'
 
 function ProjectTwo() {
   return (
-    <div className="about-container">
-      <div className="left">
+    <div className="project-container">
+      <div className="left-project">
         <div className="back-arrow">
         <Link style={{ textDecoration: "none" }} to="/project/1">
           <svg width="31" height="44" viewBox="0 0 31 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@ function ProjectTwo() {
       </div>
         </div> 
       </div>
-      <div className="right">
+      <div className="right-project">
         <div className="project-info">
           <div className="project-description">
             <h2 className="project-h2">The Project <span className="span-login">Details</span></h2>

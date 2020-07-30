@@ -4,8 +4,8 @@ import {connect} from 'react-redux'
 
 function ProjectOne() {
   return (
-    <div className="about-container">
-      <div className="left">
+    <div className="project-container">
+      <div className="left-project">
         <div className="back-arrow">
         <Link style={{ textDecoration: "none" }} to="/welcome">
           <svg width="31" height="44" viewBox="0 0 31 44" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,7 +47,7 @@ function ProjectOne() {
       </div>
         </div> 
       </div>
-      <div className="right">
+      <div className="right-project">
         <div className="project-info">
           <div className="project-description">
             <h2 className="project-h2">Main <span className="span-login">Contributions</span></h2>

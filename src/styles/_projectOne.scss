@@ -1,0 +1,119 @@
+/* project 1 */
+.project-container {
+  height: 93vh;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+.project-description {
+  width: 24vw;
+  padding: 10px;
+  border: 1px solid #525357;
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px #242526;
+  color: $text-color;
+  margin-top: 10%;
+  margin-left: 15%;
+}
+
+.left-project {
+  width: 50%;
+  background: dodgerblue;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-project {
+  width: 50%;
+  background: #484a4d;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-h2 {
+  margin-left: 25px;
+  border-bottom: 1px solid #888e92;
+  width: 38%;
+}
+
+.forward-arrow {
+  position: absolute;
+  right: 0;
+  margin-right: 30px;
+}
+.back-arrow {
+  position: absolute;
+  left: 0;
+  margin-left: 20px;
+}
+
+.codePound-duties {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-flow: column;
+}
+.duties-list {
+  list-style: square;
+  padding: 5px;
+  margin: 10px;
+}
+
+@media(max-width: 1600px){
+  .project-description {
+    width: 100%;
+    margin: 0;
+    margin-top: 20%;
+  }
+  .forward-arrow {
+    top: 0;
+    margin-top: 10vh;
+  }
+  .back-arrow {
+    top: 0;
+    margin-top: 10vh;
+  }
+}
+@media(max-width: 1225px){
+  .project-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .right-project, .left-project {
+    width: 100%;
+    // height: 50%;
+  }
+
+  .project-info {
+    width: 50%;
+  }
+  .project-description {
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+@media(max-width: 925px){
+  .project-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .right-project, .left-project {
+    width: 100%;
+    // height: 50%;
+  }
+
+  .project-info {
+    width: 50%;
+  }
+  .project-description {
+    width: 100%;
+    margin-top: 50px;
+  }
+}

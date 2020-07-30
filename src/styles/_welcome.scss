@@ -1,0 +1,278 @@
+.right-about {
+  width: 50%;
+  background: #484a4d;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.stack {
+  font-size: 1rem;
+}
+
+.about-text {
+  padding: 30px;
+  text-align: center;
+  color: $text-color;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.about-bio {
+  width: 30vw;
+  color: #dadce1;
+  font-weight: 400;
+  font-size: 1rem;  
+}
+
+.about-info {
+  width: 30vw;
+  height: 20vh;
+  /* width: 50%; */
+  text-align: center;
+
+}
+
+.about-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+}
+
+.list-item {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 60%;
+  color: #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+}
+
+.list-item:hover {
+  margin: 60%;
+  color: #dadce1;
+  border-bottom: 1px solid dodgerblue;
+}
+
+/* about left side */
+.about-container {
+  height: 93vh;
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.left-tech {
+  width: 50%;
+  background: dodgerblue;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tech-info {
+  // width: 30vw;
+  height: 20vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  /* border: 1px solid black; */
+}
+
+
+.tech-info-display {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: row wrap;
+  /* border: 1px solid black; */
+}
+
+.skills {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-flow: column;
+  /* border: 1px solid black; */
+}
+
+.tech-title {
+  color: #dadce1;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.languages-list {
+  margin: 10px;
+  color: #dadce1;
+}
+
+.skills-list {
+  margin: 5px;
+  color: #dadce1;
+}
+
+.tech-list {
+  width: 100%;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.tech-list-item {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 5% 10%;
+  color: #484a4d;
+  border-bottom: 1px solid #525357;
+}
+.tech-list-item:hover {
+  margin: 5% 10%;
+  color: #dadce1;
+  border-bottom: 1px solid #484a4d;
+}
+
+.my-resume {
+  height: 20vh;
+  z-index: 50;
+}
+
+.my-resume-popup {
+  height: 60vh;
+  /* z-index: 50; */
+}
+
+.about-img {
+  height: 12vh;
+  width: 10vw;
+  margin: 0 10px;
+  border-radius: 5px;
+}
+
+
+/* popup start */
+/* // testing popup */
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 400ms ease-in-out;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  background-image: linear-gradient(to right, #d7d2cc 0%, #888e92 100%);    width: 500px;
+  max-width: 80%;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+}
+
+.modal-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-header .close-button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.modal-body {
+  padding: 10px 15px;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, .5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+/* popup end */
+
+@media(max-width: 1600px){
+  .tech-info-display {
+    margin-bottom: 20%;
+  }
+
+  .about-bio{
+    width: 90%;
+    text-align: center;
+    margin-left: 18px;
+    margin-bottom: 10%;
+
+  }
+  .about-info {
+    width: 90%;
+    text-align: center;
+  }
+  .about-info {
+    height: 30vh;
+  }
+}
+@media(max-width: 1000px){
+  .about-container {
+    display: flex;
+    flex-flow: column;
+  }
+  .left-tech {
+    width: 100%;
+    height: 50vh;
+  }
+  .right-about {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .tech-info {
+    width: 60vw;
+  }
+  .about-info {
+    height: 30vh;
+  }
+}
+@media(max-width: 600px){
+  .right-about {
+    width: 100%;
+    height: 50vh;
+  }
+  .about-info {
+    height: 30vh;
+  }
+}

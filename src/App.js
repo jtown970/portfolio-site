@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import './App.css';
+import './styles/App.scss';
 import Routes from './routes.js'
 import Header from './components/Header';
 import axios from "axios"
