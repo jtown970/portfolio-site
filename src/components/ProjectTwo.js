@@ -39,7 +39,7 @@ function ProjectTwo() {
               <li className="duties-list">| This project is full crud following restful principles |</li>
               <li className="duties-list">| Utilized the power of Redux to track state throughout |</li>
               <li className="duties-list">| User authentication and encryption  |</li>
-              <li className="duties-list">| Utilized puppeteer for web scraping to ensure the most up to date information |</li>
+              <li className="duties-list">| Utilized puppeteer for web scraping  |</li>
               <li className="duties-list">| This project can be found on <a className="github-link" href="https://github.com/jtown970/Ivote">GitHub</a> |</li>
             </ul>
           </div>
