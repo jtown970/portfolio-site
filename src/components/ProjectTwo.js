@@ -19,37 +19,28 @@ function ProjectTwo() {
         <div id='about'>
         <h1>Ivote <span className="span-info"></span></h1>
         <div className='about'>
-          <img src={iVote} alt="ADDALT" />
+          <img className="ivote-img" src={iVote} alt="ADDALT" />
         </div>
-        {/* <div className="project-description">
-            <h2>Project <span className="span-login">Description</span></h2>
+        <div className="ivote-description">
+            <h2>Project <span className="span-description">Description</span></h2>
             <p className='about-Project'>
-                Welcome to the CodePound! A social media site geared toward developers and the ability
-                for said developers to share the creative projects they have built throughout their
-                careers. The CodePound is comparable to Instagram in sense of the post comment/ like of
-                each project (the “like” can be a “bone” or something to set itself apart) However, not
-                only does it allow developers to share projects, but receive feedback and or help on
-                projects in order to better refine these projects for live hosting. Thus, when employers
-                or others see these projects there is a more polished project backed by a community of
-                developers who are helping one another grow... Also great for any developer hoping to
-                get some extra teaching experience and learn some new things by helping other
-                developers.
+                Ivote is a web app that allows users to vote on the same bills as the house of representatives.  User votes create a dynamic chart to view their votes on.  Users can then compare their votes to the house of representatives, and see which member of the house has similar views on issues.  Users can also see what the total user votes are and see how their views line up with their community. 
               </p>
-          </div> */}
+          </div>
       </div>
         </div> 
       </div>
       <div className="right">
         <div className="project-info">
           <div className="project-description">
-            <h2 className="project-h2">Main <span className="span-login">Contributions</span></h2>
+            <h2 className="project-h2">The Project <span className="span-login">Details</span></h2>
             <ul className="codePound-duties">
-              <li className="duties-list">| Created db using PostgreSQL |</li>
-              <li className="duties-list">| Created APIs for data to flow from back-end to front-end |</li>
-              <li className="duties-list">| Build out controller files for user authentication |</li>
-              <li className="duties-list">| Built out controller file for creating, reading, updating, and deleting posts |</li>
-              <li className="duties-list">| Helping the front-end developers with axios calls and prop drilling data |</li>
-              <li className="duties-list">| Set up a ubuntu server with digitalOcean |</li>
+              <li className="duties-list">| Created using the PERN stack |</li>
+              <li className="duties-list">| This project is full crud following restful principles |</li>
+              <li className="duties-list">| Utilized the power of Redux to track state throughout |</li>
+              <li className="duties-list">| User authentication and encryption  |</li>
+              <li className="duties-list">| Utilized puppeteer for web scraping to ensure the most up to date information |</li>
+              <li className="duties-list">| This project can be found on <a className="github-link" href="https://github.com/jtown970/Ivote">GitHub</a> |</li>
             </ul>
           </div>
           <p className="about-bio"></p>

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {Link, withRouter} from 'react-router-dom'
 import {connect} from 'react-redux'
-import myResume from '../img/myResume.PNG'
+// import myRes from '../img/myResume.PNG'
+import myResume from '../img/cleanResume.PNG'
 import codePound from '../img/code-pound-home.PNG'
 import iVote from '../img/I-vote.PNG'
  const Welcome = () => {
@@ -87,9 +88,9 @@ function closeModal(modal) {
     setAboutSpan('Goals')
   }
 
-  function toggleSeeResume() {
-    setSeeResume(!seeResume)
-  }
+  // function toggleSeeResume() {
+  //   setSeeResume(!seeResume)
+  // }
 
 
 

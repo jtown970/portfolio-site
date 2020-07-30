@@ -97,7 +97,7 @@ function Login(props) {
           <div>
           <button className="login-btn" onClick={() => register()}>Register</button>
             <span className="register-btn-span">
-              <p onClick={() => toggleReg()} className="register-btn">Login</p>
+              <p onClick={() => toggleReg()} className="reg-btn register-btn">Login</p>
             </span> 
           </div>
           }

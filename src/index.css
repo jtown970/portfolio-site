@@ -195,6 +195,8 @@ a {
   width: 100%;
 }
 
+
+
 /* landing page */
 .landing-page{
   height: 60vh;
@@ -357,13 +359,17 @@ a {
   font-weight: 400;
   border-bottom: 1px solid dodgerblue;
   padding: 5px;
-  margin-left: 73px;
+  margin-left: 80px;
 }
 
 
 .register-btn:hover {
   color: dodgerblue;
   border-bottom: 1px solid #a0a0a0;
+}
+
+.reg-btn {
+  margin-left: 95px;
 }
 
 .letter-j {
@@ -707,7 +713,18 @@ a {
 }
 
 
+/* project two */
 
+.ivote-img {
+  height: 40vh;
+  border-radius: 10px;
+  box-shadow: 3px 3px 15px #525357;
+
+}
+
+.github-link {
+  color: dodgerblue;
+}
 
 
 

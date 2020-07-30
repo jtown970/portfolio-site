@@ -58,6 +58,7 @@ function ProjectOne() {
               <li className="duties-list">| Built out controller file for creating, reading, updating, and deleting posts |</li>
               <li className="duties-list">| Helping the front-end developers with axios calls and prop drilling data |</li>
               <li className="duties-list">| Set up a ubuntu server with digitalOcean |</li>
+              <li className="duties-list">| This project can be found on <a className="github-link" href="https://github.com/TheCodePound/TheCodePound">GitHub</a> |</li>
             </ul>
           </div>
           <p className="about-bio"></p>
