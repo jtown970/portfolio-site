@@ -185,9 +185,9 @@ function closeModal(modal) {
           { story === true ? (
           <p className="about-bio">Hey my name is Jason Towner I'm a 26 year old Full Stack web developer. <br/>I made the switch to programing when I was 24 after working in restaurants for 13 yep started bussing table at 11.  I feel in love with coding when I first saw that I could build something that would alow people from all over the world to use something I was able to build.</p>
           ) : ( passion === true ? (
-            <p className="about-bio">this is my passion</p>
+            <p className="about-bio">While there are many things I would say I'm passionate about the main three would be programming, photography, and the outdoors.  Programming has changed my life in many ways it sparks my curiosity, improved my patience, and opened up a new carer path. photography and the outdoors go hand in hand.  I had the opportunity to adventure to some amazing places over the years and the camera allows to me capture that moment in time to look back on and enjoy and sure with friends and family. </p>
           ) : ( goals === true ? (
-            <p className="about-bio"> my goals here</p>
+            <p className="about-bio"> My goals are separated into three areas yet all overlap. starting with work, I aim not to land a great job but to begin a great career, one that I'm confident that what I'm doing on a daily basis adds up to make positive impact.  Heath, I aim to hike every 14er in colorado, this goal was set after reacting my first summit over 14k feet and continues after reacting my 14th.  Happiness is a harder one to pin down, but hearing your hired from you would more likely help. haha </p>
           ): null ))}
         </div>
         <div className="about-sections">
