@@ -499,7 +499,7 @@ a {
 
 
 .about-container {
-  height: 93.5vh;
+  height: 93vh;
   display: flex;
   flex-flow: row wrap;
   text-align: center;

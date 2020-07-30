@@ -5,7 +5,7 @@ import iVote from '../img/I-vote.PNG'
 
 function ProjectTwo() {
   return (
-    <div className="login-container">
+    <div className="about-container">
       <div className="left">
         <div className="back-arrow">
         <Link style={{ textDecoration: "none" }} to="/project/1">

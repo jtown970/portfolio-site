@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 
 function ProjectOne() {
   return (
-    <div className="login-container">
+    <div className="about-container">
       <div className="left">
         <div className="back-arrow">
         <Link style={{ textDecoration: "none" }} to="/welcome">
