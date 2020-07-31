@@ -117,3 +117,32 @@
     margin-top: 50px;
   }
 }
+@media(max-width: 600px){
+  .video-youtube {
+    width: 90vw;
+  }
+  .project-description{
+    // width: 90vw;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .project-info {
+    width: 100%;
+  }
+  .about-text {
+    padding: 0;
+  }
+  .right-project {
+    // display: none;
+    justify-content: space-around;
+    // align-items: flex-start;
+    // padding-left: 2px;
+  }
+  .project-container {
+    text-align: left;
+  }
+}
+

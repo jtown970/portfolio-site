@@ -20,6 +20,7 @@ function ProjectOne() {
         <div className='about'>
           {/* <img src="" alt="ADDALT" /> */}
           <iframe
+          className="video-youtube"
             title="What is Codepound"
             width='560'
             height='315'

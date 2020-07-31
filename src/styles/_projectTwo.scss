@@ -10,3 +10,15 @@
 .github-link {
   color: dodgerblue;
 }
+
+@media(max-width: 600px){
+  .ivote-img {
+    height: 20vh;
+  }
+
+  .about-project {
+    font-size: .6rem;
+    width: 90%;
+    font-weight: 200;
+  }
+}

@@ -792,6 +792,33 @@
   }
 }
 
+@media (max-width: 600px) {
+  .video-youtube {
+    width: 90vw;
+  }
+  .project-description {
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+  .project-info {
+    width: 100%;
+  }
+  .about-text {
+    padding: 0;
+  }
+  .right-project {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .project-container {
+    text-align: left;
+  }
+}
+
 /* project two */
 .ivote-img {
   height: 40vh;
@@ -802,6 +829,17 @@
 
 .github-link {
   color: dodgerblue;
+}
+
+@media (max-width: 600px) {
+  .ivote-img {
+    height: 20vh;
+  }
+  .about-project {
+    font-size: .6rem;
+    width: 90%;
+    font-weight: 200;
+  }
 }
 
 body {
