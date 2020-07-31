@@ -44,7 +44,7 @@
 .list-item {
   font-size: 1.1rem;
   font-weight: 500;
-  margin: 60%;
+  margin-top: 100px;
   color: #a0a0a0;
   border-bottom: 1px solid #a0a0a0;
 }
@@ -120,7 +120,7 @@
 }
 
 .tech-list {
-  width: 100%;
+  width: 40vw;
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
@@ -226,6 +226,15 @@
 }
 /* popup end */
 
+.about-list-items {
+  color: #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+}
+.about-list-items:hover {
+  color: #dadce1;
+  border-bottom: 1px solid dodgerblue;
+}
+
 @media(max-width: 1600px){
   .tech-info-display {
     margin-bottom: 20%;
@@ -268,11 +277,43 @@
   }
 }
 @media(max-width: 600px){
-  .right-about {
+  .about-container {
+    height: 180vh;
+  }
+  .left-tech {
     width: 100%;
-    height: 50vh;
+    height: 80vh;
+}
+  .right-about {
+    justify-content: space-around;
+    width: 100%;
+    height: 100vh;
   }
   .about-info {
     height: 30vh;
+  }
+
+  .tech-list {
+    width: auto;
+  }
+
+  .tech-list-item {
+    margin: 30% 10%;
+  }
+  .tech-list-item:hover {
+    margin: 30% 10%;
+  }
+  .tech-info {
+    width: 90vw;
+  }
+  .about-portfolio {
+    display: flex;
+    flex-flow: column;
+    width: 80%;
+  }
+
+  .about-img {
+    height: 15vh;
+    width: 40vw;
   }
 }

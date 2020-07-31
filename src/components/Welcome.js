@@ -174,13 +174,13 @@ function closeModal(modal) {
             <p className="about-bio"> My goals are separated into three areas yet all overlap. starting with work, I aim not to land a great job but to begin a great career, one that I'm confident that what I'm doing on a daily basis adds up to make positive impact.  Heath, I aim to hike every 14er in colorado, this goal was set after reacting my first summit over 14k feet and continues after reacting my 14th.  Happiness is a harder one to pin down, but hearing your hired from you would more likely help. haha </p>
           ): null ))}
         </div>
-        <div className="tech-sections">
+        {/* <div className="tech-sections"> */}
           <ul className="tech-list">
-            <li onClick={() => toggleStory()} className="list-item">Story</li>
-            <li onClick={() => togglePassion()} className="list-item">Passion</li>
-            <li onClick={() => toggleGoals()} className="list-item">Goals</li>
+            <li onClick={() => toggleStory()} className="tech-list-item about-list-items">Story</li>
+            <li onClick={() => togglePassion()} className="tech-list-item about-list-items">Passion</li>
+            <li onClick={() => toggleGoals()} className="tech-list-item about-list-items">Goals</li>
           </ul>
-        </div>
+        {/* </div> */}
       </div>
     </div>
   )
